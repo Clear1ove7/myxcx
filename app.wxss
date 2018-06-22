@@ -1,0 +1,43 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100rpx;
+  box-sizing: border-box;
+}
+view{
+  box-sizing: border-box;
+} 
+.bc_green{
+  background: #6c9;
+  color: #fff !important;
+}
+.bc_red{
+  background: #f00;
+  color: #fff !important;
+}
+.bc_yellow{
+  background: #ff0;
+  color: #fff !important;
+}
+.bc_orange{
+  background: #ec7626;
+  color: #fff !important;
+}
+.bc_blue{
+  background: #69c;
+  color: #fff !important;
+}
+.big{
+  font-size: 35rpx !important;
+}
+.title{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  text-align: center;
+  font-size: 38rpx !important;
+}

@@ -1,0 +1,62 @@
+<view class="page-section page-section-spacing swiper">
+  <image src='../src/img/bg.jpg' class='bgimg'></image>
+  <view class='music'><image src='../src/img/music.png' data-class='{{music}}'  class='{{music}}' bindtap="audioPlay"></image></view>
+  <audio src="{{src}}" id="myAudio" controls loop></audio>
+  <swiper indicator-dots interval="3000" vertical="true" duration="500" bindchange="asss">
+      <swiper-item>
+        <view class="swiper-item">
+          <image src='../src/img/user.jpg' class="{{className1}}"></image>
+          <text class='{{className1}} leftText poText'>余仲锋</text>
+          <text class='{{className1}} leftText left2 poText'>广东省揭阳市</text>
+          <text class='{{className1}} rightText poText'>24岁</text>
+          <text class='{{className1}} rightText right2 poText' bindtap='callme'>{{userCall}}</text>
+          <view class='items {{className1}}'>
+            <text class="title">基本信息</text>
+            <text wx:for = '{{userinfo}}'>{{item.key}}： {{item.val}}</text>
+            <text>{{selfTall}}</text>
+            <view class='btnDiv'>
+              <text class="bc_green" bindtap='addActive'>微信联系</text>
+              <button class="bc_orange" session-from="weapp" open-type="contact">在线联系</button>
+              <text class="bc_blue" bindtap='callme'>电话联系</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiper-item">
+          <view class='itemTop {{classname2}}'>专业技能</view>
+          <view class='itemBody {{classname2}}'>
+            <view class='rows' wx:for="{{majorlist}}">
+              <label>{{item.name}}</label>
+              <view class='move' style='width:{{item.num}}%'><text class='showList {{classname2}}'>{{item.num}}%</text></view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiper-item">
+          <view class='itemTop {{classname3}}'>工作与教育</view>
+          <view class='itemJob {{classname3}}' wx:for="{{joblist}}" wx:for-item = 'item'>
+            <text>{{item.name}}</text>
+            <text wx:for="{{item.textlist}}"  wx:for-item = 'text'>{{text.name}}：{{text.val}}</text>
+            <text class='{{item.al}}' data-class='{{item.al}}' data-type='{{index}}' bindtap='textActive'>{{item.detailName}}：{{item.detailVal}}</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="swiper-item">
+          <view class='itemTop {{classname4}}'>项目经验</view>
+          <view class='{{classname4}} project'>
+            <swiper indicator-dots interval="3000" duration="500">
+              <block wx:for="{{project}}">
+                <swiper-item>
+                  <text bindlongtap='getInfo' data-val="{{item.name}}">{{item.name}}</text>
+                  <text bindlongtap='getInfo' data-val="{{text.val}}" wx:for="{{item.textlist}}"  wx:for-item = 'text'>{{text.name}}：{{text.val}}</text>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+        </view>
+      </swiper-item>
+  </swiper>
+</view>
