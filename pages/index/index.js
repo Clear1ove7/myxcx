@@ -19,7 +19,7 @@ Page({
       { 'name': 'HTML', 'num': 90 },
       { 'name': 'CSS', 'num': 92 },
       { 'name': 'JavaScript', 'num': 85 },
-      { 'name': 'jQuery', 'num': 88 },
+      { 'name': 'jQuery', 'num': 90 },
       { 'name': 'bootstrap', 'num': 83 },
       { 'name': 'mui', 'num': 82 },
       { 'name': 'ajax', 'num': 85 },

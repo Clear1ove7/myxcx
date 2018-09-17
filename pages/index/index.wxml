@@ -12,7 +12,7 @@
           <text class='{{className1}} rightText right2 poText' bindtap='callme'>{{userCall}}</text>
           <view class='items {{className1}}'>
             <text class="title">基本信息</text>
-            <text wx:for = '{{userinfo}}'>{{item.key}}： {{item.val}}</text>
+            <text wx:for = '{{userinfo}}' wx:key="{{index}}">{{item.key}}： {{item.val}}</text>
             <text>{{selfTall}}</text>
             <view class='btnDiv'>
               <text class="bc_green" bindtap='addActive'>微信联系</text>
@@ -26,7 +26,7 @@
         <view class="swiper-item">
           <view class='itemTop {{classname2}}'>专业技能</view>
           <view class='itemBody {{classname2}}'>
-            <view class='rows' wx:for="{{majorlist}}">
+            <view class='rows' wx:for="{{majorlist}}" wx:key="{{index}}">
               <label>{{item.name}}</label>
               <view class='move' style='width:{{item.num}}%'><text class='showList {{classname2}}'>{{item.num}}%</text></view>
             </view>
@@ -36,10 +36,10 @@
       <swiper-item>
         <view class="swiper-item">
           <view class='itemTop {{classname3}}'>工作与教育</view>
-          <view class='itemJob {{classname3}}' wx:for="{{joblist}}" wx:for-item = 'item'>
+          <view class='itemJob {{classname3}}' wx:key="{{index}}" wx:for="{{joblist}}" wx:for-item = 'item'>
             <text>{{item.name}}</text>
-            <text wx:for="{{item.textlist}}"  wx:for-item = 'text'>{{text.name}}：{{text.val}}</text>
-            <text class='{{item.al}}' data-class='{{item.al}}' data-type='{{index}}' bindtap='textActive'>{{item.detailName}}：{{item.detailVal}}</text>
+            <text wx:for="{{item.textlist}}"  wx:key="{{key}}"  wx:for-item = 'text'>{{text.name}}：{{text.val}}</text>
+            <text class='{{item.al}}' wx:key="{{index}}" data-class='{{item.al}}' data-type='{{index}}' bindtap='textActive'>{{item.detailName}}：{{item.detailVal}}</text>
           </view>
         </view>
       </swiper-item>
@@ -48,7 +48,7 @@
           <view class='itemTop {{classname4}}'>项目经验</view>
           <view class='{{classname4}} project'>
             <swiper indicator-dots interval="3000" duration="500">
-              <block wx:for="{{project}}">
+              <block wx:for="{{project}}" wx:key="{{index}}">
                 <swiper-item>
                   <text bindlongtap='getInfo' data-val="{{item.name}}">{{item.name}}</text>
                   <text bindlongtap='getInfo' data-val="{{text.val}}" wx:for="{{item.textlist}}"  wx:for-item = 'text'>{{text.name}}：{{text.val}}</text>

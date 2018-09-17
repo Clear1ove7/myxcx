@@ -3,15 +3,28 @@ page {
   font-size: 32rpx;
   line-height: 1.6;
 }
-@keyframes retoto{
-  0%{ transform:rotate(0deg); }
-  100%{ transform:rotate(360deg); }
+
+@keyframes retoto {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
-@-webkit-keyframes retoto{
-    0%{ transform:rotate(0deg); }
-    100%{ transform:rotate(360deg); }
+
+@-webkit-keyframes retoto {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.music{
+
+.music {
   display: block;
   width: 60rpx;
   height: 60rpx;
@@ -20,22 +33,26 @@ page {
   top: 20rpx;
   z-index: 666;
   border-radius: 50%;
-  box-shadow: 0 0 1px rgba(0,0,0,0.5),0 10px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 10px 15px rgba(0, 0, 0, 0.3);
 }
-.music image.active{
+
+.music image.active {
   animation: retoto 5s infinite linear;
   -webkit-animation: retoto 5s infinite linear;
 }
-audio{
+
+audio {
   position: fixed;
   top: -100%;
 }
-.music>image{
+
+.music>image {
   display: block;
   width: 100%;
   height: 100%;
 }
-.bgimg{
+
+.bgimg {
   display: block;
   left: 0;
   top: 0;
@@ -44,42 +61,48 @@ audio{
   position: fixed;
   z-index: -1;
 }
-swiper{
-  background: rgba(255,255,255,0.6);
-  background: -webkit-linear-gradient(top,#fff,rgba(200,200,200,0.4) );
+
+swiper {
+  background: rgba(255, 255, 255, 0.6);
+  background: -webkit-linear-gradient(top, #fff, rgba(200, 200, 200, 0.4));
 }
-.swiper,swiper{
+
+.swiper, swiper {
   height: 100%;
 }
-.swiper-item{
+
+.swiper-item {
   display: block;
   height: 100%;
   position: relative;
 }
-.items{
+
+.items {
   width: 80%;
   top: 23%;
   position: absolute;
   left: 10%;
   background: #fff;
-  background: linear-gradient(top,#ddd,#fff,#ddd);
-  background: -webkit-linear-gradient(top,#ddd,#fff,#ddd);
+  background: linear-gradient(top, #ddd, #fff, #ddd);
+  background: -webkit-linear-gradient(top, #ddd, #fff, #ddd);
   border-radius: 10px;
   border: 0.5px solid #aaa;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   padding: 0 10px;
-  transform: scale(0,0) rotateX(180deg);
+  transform: scale(0, 0) rotateX(180deg);
   transition-delay: 0.1s;
   transition-duration: 1s;
   transition-timing-function: ease-out;
   opacity: 0;
   padding-bottom: 80rpx;
 }
-.items.active{
-  transform: scale(1,1) rotateX(0deg);
+
+.items.active {
+  transform: scale(1, 1) rotateX(0deg);
   opacity: 1;
 }
-.items:after{
+
+.items:after {
   content: '';
   position: absolute;
   width: 14px;
@@ -94,19 +117,22 @@ swiper{
   border-right: none;
   border-bottom: none;
 }
-.items .title{
+
+.items .title {
   margin: 0;
   height: 80rpx;
   line-height: 80rpx;
 }
-.items>view{
+
+.items>view {
   width: 100%;
   height: 80rpx;
   left: 0;
-  bottom:0;
+  bottom: 0;
   position: absolute;
 }
-.items>view>text,.items>view>button{
+
+.items>view>text, .items>view>button {
   display: block;
   float: left;
   text-align: center;
@@ -116,49 +142,57 @@ swiper{
   height: 100%;
   line-height: 80rpx;
   font-size: 28rpx;
-  text-shadow: 0 1px #494949; 
+  text-shadow: 0 1px #494949;
 }
-.items>view>button{
+
+.items>view>button {
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
   box-shadow: none !important;
   border-radius: 0 !important;
 }
-.items>view>text:nth-child(1){
+
+.items>view>text:nth-child(1) {
   border-radius: 0 0 0 10px;
 }
-.items>view>text:nth-child(3){
+
+.items>view>text:nth-child(3) {
   border-radius: 0 0 10px 0;
 }
-.items text{
+
+.items text {
   box-sizing: border-box;
   border-bottom: 0.5px solid #ccc;
   padding: 20rpx 5rpx;
   line-height: 30rpx;
   font-size: 26rpx;
 }
-.btnDiv text{
+
+.btnDiv text {
   line-height: 80rpx;
   padding: 0;
 }
-.items text:last-child{
+
+.items text:last-child {
   border: none;
 }
-.swiper-item image{
+
+.swiper-item image {
   display: block;
   border-radius: 50%;
   width: 200rpx;
   height: 200rpx;
-  margin:0 auto;
+  margin: 0 auto;
   margin-bottom: 10px;
-  border: 10px solid rgba(0,0,0,0.05);
-  transform: scale(0,0);
+  border: 10px solid rgba(0, 0, 0, 0.05);
+  transform: scale(0, 0);
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
   opacity: 0;
 }
-.poText{
+
+.poText {
   top: 25rpx;
   box-sizing: border-box;
   position: absolute;
@@ -170,18 +204,21 @@ swiper{
   font-size: 25rpx;
   border-radius: 5px;
   transition-delay: 1s;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   opacity: 0;
   transform: scaleX(0);
 }
-.poText.active{
+
+.poText.active {
   opacity: 1;
   transform: scaleX(1);
 }
-.items>text,.itemJob>text{
+
+.items>text, .itemJob>text {
   width: 100%;
 }
-.poText::after{
+
+.poText::after {
   content: '';
   position: absolute;
   top: 10rpx;
@@ -189,35 +226,41 @@ swiper{
   border-top: 10rpx solid transparent;
   border-bottom: 10rpx solid transparent;
 }
-.leftText::after{
+
+.leftText::after {
   border-left-color: #333;
   right: -30rpx;
 }
-.rightText::after{
+
+.rightText::after {
   border-right-color: #333;
   left: -30rpx;
 }
-.leftText{
+
+.leftText {
   right: 50%;
   margin-right: 140rpx;
 }
-.rightText{
+
+.rightText {
   left: 50%;
   margin-left: 140rpx;
 }
-.left2,
-.right2{
+
+.left2, .right2 {
   top: 120rpx;
 }
-.swiper-item image.active{
-  transform: scale(1,1);
+
+.swiper-item image.active {
+  transform: scale(1, 1);
   opacity: 1;
 }
-.swiper-item text{
+
+.swiper-item text {
   display: inline-block;
 }
 
-.itemTop{
+.itemTop {
   width: 80%;
   text-align: center;
   height: 120rpx;
@@ -225,35 +268,39 @@ swiper{
   border: 0.5px solid #ccc;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
-  transform: scale(0,0);
-  transition-duration: .5s;
+  transform: scale(0, 0);
+  transition-duration: 0.5s;
   opacity: 0;
 }
-.itemTop.active{
-  transform: scale(1,1);
+
+.itemTop.active {
+  transform: scale(1, 1);
   opacity: 1;
 }
-.itemBody{
+
+.itemBody {
   width: 80%;
   text-align: center;
   border: 0.5px solid #ccc;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   margin: 20px auto 0;
   padding: 10px 0;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
   transition-duration: 1s;
-  transform: scale(0,0) rotateX(180deg);
+  transform: scale(0, 0) rotateX(180deg);
   opacity: 0;
 }
-.itemBody.active{
-  transform: scale(1,1) rotateX(0deg);
+
+.itemBody.active {
+  transform: scale(1, 1) rotateX(0deg);
   opacity: 1;
 }
-.rows{
+
+.rows {
   width: 100%;
   padding: 0 10px;
   height: 60rpx;
@@ -266,9 +313,10 @@ swiper{
   font-size: 26rpx;
   color: #494949;
 }
-.rows>label{
+
+.rows>label {
   display: block;
-  width:28%;
+  width: 28%;
   text-align: right;
   position: absolute;
   height: 100%;
@@ -277,7 +325,8 @@ swiper{
   left: 10px;
   top: 0;
 }
-.rows>.move{
+
+.rows>.move {
   width: 100%;
   height: 50rpx;
   top: 5rpx;
@@ -285,42 +334,46 @@ swiper{
   position: relative;
   text-align: center;
 }
-.rows>.move>text{
+
+.rows>.move>text {
   display: block;
   width: 0;
   height: 100%;
   line-height: 50rpx;
   position: absolute;
   background: #69c;
-  border-radius:10rpx;
+  border-radius: 10rpx;
   transition-delay: 1.5s;
   transition-duration: 2s;
   top: 0;
   left: 0;
   color: #fff;
 }
-.rows>.move>text.active{
+
+.rows>.move>text.active {
   width: 100%;
 }
 
-.itemJob{
+.itemJob {
   width: 80%;
   border: 0.5px solid #ccc;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   margin: 20px auto 0;
   padding: 10px;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
   transition-duration: 1s;
-  transform: scale(0,0) rotateX(180deg);
+  transform: scale(0, 0) rotateX(180deg);
   opacity: 0;
 }
-.itemJob.active{
-  transform: scale(1,1) rotateX(0deg);
+
+.itemJob.active {
+  transform: scale(1, 1) rotateX(0deg);
   opacity: 1;
 }
-.itemJob text{
+
+.itemJob text {
   line-height: 40rpx;
   padding: 5rpx 0;
   margin-bottom: 10rpx;
@@ -330,9 +383,10 @@ swiper{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
-.itemJob text.active{
+
+.itemJob text.active {
   line-height: 40rpx;
   max-height: 120rpx;
   overflow: initial;
@@ -340,24 +394,26 @@ swiper{
   white-space: initial;
 }
 
-.project{
+.project {
   width: 90%;
   border: 0.5px solid #ccc;
   height: 600rpx;
   border-radius: 10px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   margin: 20px auto 0;
   padding: 20px;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
   transition-duration: 1s;
-  transform: scale(0,0) rotateX(180deg);
+  transform: scale(0, 0) rotateX(180deg);
   opacity: 0;
 }
-.project.active{
-  transform: scale(1,1) rotateX(0deg);
+
+.project.active {
+  transform: scale(1, 1) rotateX(0deg);
   opacity: 1;
 }
-.project text{
+
+.project text {
   width: 100%;
   box-sizing: border-box;
   line-height: 40rpx;
@@ -365,7 +421,8 @@ swiper{
   border-bottom: 0.5px solid #ccc;
   font-size: 26rpx;
 }
-.project swiper{
+
+.project swiper {
   width: 100%;
   box-sizing: border-box;
   background: #fff;

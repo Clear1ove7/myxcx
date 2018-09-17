@@ -6,6 +6,7 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
+
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.9",
